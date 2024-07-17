@@ -27,8 +27,4 @@ jobs:
           docker build -t projet_detection_fraudes .
           docker tag projet_detection_fraudes:latest projet_detection_fraudes:$(git rev-parse --short $GITHUB_SHA)
 
-      - name: Push Docker Image
-        run: |
-          echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-          docker push projet_detection_fraudes:$(git rev-parse --short $GITHUB_SHA)
-
+     
