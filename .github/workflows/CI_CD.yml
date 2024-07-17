@@ -25,6 +25,5 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t projet_detection_fraudes .
-          docker tag projet_detection_fraudes:latest projet_detection_fraudes:$(git rev-parse --short $GITHUB_SHA)
+          docker tag zach27/projet_detection_fraudes:latest projet_detection_fraudes:$(git rev-parse --short $GITHUB_SHA)
 
-     
